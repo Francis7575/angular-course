@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 export class RolesComponent implements OnInit {
   roleList: IRole[] = [];
   http = inject(HttpClient);
+  isLoading: boolean = true
 
   ngOnInit(): void {
     this.getAllRoles()
@@ -23,6 +24,7 @@ export class RolesComponent implements OnInit {
       .get<APIResponseModel>('https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllRoles')
       .subscribe((res: APIResponseModel) => {
         this.roleList = res.data;
+        this.isLoading = false
       });
   }
 }

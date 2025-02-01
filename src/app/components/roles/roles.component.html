@@ -1,4 +1,17 @@
 <div class="row">
+  @if (isLoading) {
+  <div class="col-12 text-center">
+    <div class="spinner-border text-muted"></div>
+    <div class="spinner-border text-primary"></div>
+    <div class="spinner-border text-success"></div>
+    <div class="spinner-border text-info"></div>
+    <div class="spinner-border text-warning"></div>
+    <div class="spinner-border text-danger"></div>
+    <div class="spinner-border text-secondary"></div>
+    <div class="spinner-border text-dark"></div>
+    <div class="spinner-border text-light"></div>
+  </div>
+  } @else {
   <div class="col-12">
     <table class="table table-bordered">
       <thead>
@@ -7,12 +20,15 @@
           <th>Role Name</th>
         </tr>
       </thead>
+      @for (item of roleList; track item.roleId) {
       <tbody>
-        <tr *ngFor="let role of roleList">
-          <td>{{role.roleId}}</td>
-          <td>{{role.role}}</td>
+        <tr>
+          <td>{{ item.roleId }}</td>
+          <td>{{ item.role }}</td>
         </tr>
       </tbody>
+      }
     </table>
   </div>
+  }
 </div>
