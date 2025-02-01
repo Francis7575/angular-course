@@ -1,4 +1,3 @@
-<p>roles works!</p>
 <div class="row">
   <div class="col-3">
     <p>{{ firstName }}</p>
@@ -34,13 +33,19 @@
 </div>
 
 <div class="row">
-    <div class="col-3">
-        <button class="btn btn-success" (click)="showWelcomeAlert()">Show Alert</button>
-    </div> 
-    <div class="col-3">
-        <button class="btn btn-success" (click)="showMessage('Welcome Francis')">Show hello message</button>
-    </div> 
-    <div class="col-3">
-        <button class="btn btn-success" (click)="showMessage('Goodbye Francis')">Show goodbye message</button>
-    </div> 
+  <div class="col-3">
+    <button class="btn btn-success" (click)="showWelcomeAlert()">
+      Show Alert
+    </button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-success" (click)="showMessage('Welcome Francis')">
+      Show hello message
+    </button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-success" (click)="showMessage('Goodbye Francis')">
+      Show goodbye message
+    </button>
+  </div>
 </div>
